@@ -1,6 +1,37 @@
 .App {
+  height: 100%;
+  display: flex;
+}
+
+.main {
+  flex: 1;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #111;
+}
+
+.drawer {
+  width: 300px;
+  height: 100vh;
+  box-shadow: 0 -20px 20px rgba(0,0,0,0.5);
+  padding: 20px;
+  background-color: #151515;
+  color: white;
+  z-index: 1
+}
+
+input {
+  display: none;
+}
+label {
+  display: block;
+  padding: 5px 10px;
+  border-bottom: 1px solid #222;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input:checked + label {
+  background: #222;
 }
