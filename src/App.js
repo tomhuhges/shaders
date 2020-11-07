@@ -12,10 +12,12 @@ function App() {
   return (
     <div className="App">
       <form className="drawer">
-        <input id="#helloGL" type="radio" value="helloGL" onInput={handleInput} checked={shader === 'helloGL'} />
-        <label for="#helloGL">helloGL</label>
-        <input id="#color" type="radio" value="color" onInput={handleInput} checked={shader === 'color'} />
-        <label for="#color">color</label>
+        {Object.keys(shaders).map(shaderName => (
+          <React.Fragment>
+            <input id={`#${shaderName}`} type="radio" value={shaderName} onInput={handleInput} checked={shader === shaderName} />
+            <label for={`#${shaderName}`}>{shaderName}</label>
+          </React.Fragment>
+        ))}
       </form>
       <div class="main">
         <Surface width={300} height={300}>

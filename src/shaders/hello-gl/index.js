@@ -1,10 +1,12 @@
 import React from 'react';
 import { Shaders, Node, GLSL } from 'gl-react';
-import helloGL from './hello-gl.glsl';
+import vert from './hello-gl.vert.glsl';
+import frag from './hello-gl.frag.glsl';
 
 const shaders = Shaders.create({
   helloGL: {
-    frag: GLSL`${helloGL}`
+    vert: GLSL`${vert}`,
+    frag: GLSL`${frag}`
   }
 });
 

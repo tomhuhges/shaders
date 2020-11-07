@@ -1,7 +1,6 @@
 precision highp float;
 
-varying vec2 uv;
-
 void main(){
-  gl_FragColor = vec4( uv.y, uv.x, .5 , 1. );
+  // set color to blue
+  gl_FragColor = vec4( 0, 0, 1 , 1. );
 }
